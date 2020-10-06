@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Roku Controller DEMO</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/vex-theme-os.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/index.js"></script>
+  </head>
+  <body class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4 style="text-align: center; font-weight: bolder;">Remote Control</h4>
+                <div class="roku-btn-1" title="power" name="power">ON/OFF</div>
+                <div class="roku-btn-1 left" title="Go Back" name="back" >⬅</div>
+                <div class="roku-btn-1 right" title="Home" name="home">🏠</div>
+                <div class="arrowController">
+                  <div class="roku-btn-2 left"  title="left" name="left" >&#8678;</div>
+                  <div class="roku-btn-2 right"  title="right" name="right" >&#8680;</div>
+                  <div class="roku-btn-2 left"  title="top" name="up" >&#8679;</div>
+                  <div class="roku-btn-2 right" title="down" name="down" >&#8681;</div>
+                  <div class="roku-btn-2 left"  title="ok" name="ok" >OK</div>
+                </div>
+                <div class="roku-btn-1 left" title="jumpback/channel recall" name="jumpback">⟲</div>
+                <div class="roku-btn-1 right" title="options" name="options">&#9728;</div>
+                <div class="playController">
+                  <div class="roku-btn-1 left"  title="rewind" name="rewind" >&#171;</div>
+                  <div class="roku-btn-1 right"  title="fastforward" name="fastforward" >&#187;</div>
+                  <div class="roku-btn-1 left"  title="pause/play" name="pause/play" >
+                    <span style="font-size: 1.2em; pointer-events: none;">&#9658;</span> 
+                    <span style="font-size: 0.75em;position: relative;bottom: 2px; pointer-events: none;">&#9612;&#9612;</span>
+                  </div>
+                </div>
+                <div class="volumeController">
+                  <div class="roku-btn-1" title="apps" name="apps"> APPS</div>
+                  <div class="roku-btn-1"  title="volume up" name="volup" >VOL(+)</div>
+                  <div class="roku-btn-1"  title="volume down" name="voldown" >VOL(-)</div>
+                  <div class="roku-btn-1"  title="mute" name="mute" >MUTE</div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-7">
+                <h4 style="text-align: center; font-weight: bolder;">My Devices</h4>
+                <ul class="list-group">
+                  <li class="list-group-item template">No Devices found..</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row row-footer">
+        
+        <div class="col-md-1">
+          <div class="lds-ripple" style="display: none;"><div></div><div></div></div>
+        </div>
+        <div class="col-md-4">
+          <p name="connection-status-text">Your are not connected to internet</p>
+        </div>
+        <div class="col-md-2">
+          <div style="display: flex;" title="When checked, this app will check for Roku's on your network every 5 seconds.">
+            <div>
+            <input type="checkbox" name="autodiscover">
+            </div>
+            <div>
+            <label for="autodiscover">Auto Discover</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div style="display: flex;" title="When checked, this app will register keyboard presses to your Roku">
+            <div>
+            <input type="checkbox" name="keyregister">
+            </div>
+            <div>
+            <label for="keyregister">Key Register</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="roku-btn-1" title="add a roku" name="add">
+            ADD
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="roku-btn-1" title="help" name="help">
+            HELP
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

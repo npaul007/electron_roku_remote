@@ -1,0 +1,51 @@
+{
+  "name": "RokuController",
+  "version": "1.1.11",
+  "description": "Desktop roku controller for macOS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist":"electron-builder"
+  },
+  "author": "Nathanael Paulemon",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.0.2",
+    "electron-builder": "^22.4.1",
+    "electron-packager": "^14.2.1"
+  },
+  "dependencies": {
+    "roku-client": "^3.2.0",
+    "vex-dialog": "^1.1.0",
+    "vex-js": "^4.1.0",
+    "wifi-name": "^3.1.1"
+  },
+  "build":{
+    "appId":"com.electron.rokucontroller",
+    "mac": {
+      "target": [
+          "mas","pkg"
+        ],
+      "icon":"./build/icon.icns"
+    },
+    "mas": {
+      "hardenedRuntime": false,
+      "provisioningProfile": "./build/embedded.provisionprofile",
+      "entitlements": "./build/entitlements.mas.plist",
+      "entitlementsInherit": "./build/entitlements.mas.inherit.plist",
+      "gatekeeperAssess": false,
+      "asarUnpack": []
+    },
+    "pkg":{
+      "license":"./build/license.txt"
+    },
+    "win":{
+      "target":[
+        "nsis"
+      ]
+    },
+    "nsis":{
+      "license":"./build/license.txt"
+    }
+  }
+}
